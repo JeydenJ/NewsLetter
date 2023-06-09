@@ -1,4 +1,14 @@
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('./assets/fonts/Roboto-Regular.ttf') format('truetype');
+}
+@font-face{ 
+    font-family: 'Roboto-Bold';
+    src: url('./assets/fonts/Roboto-Bold.ttf') format('truetype');
+}
 :root{
+    --Roboto-Regular: 'Roboto-Regular', 'sans serif';
+    --Roboto-Bold: 'Roboto-Bold', 'sans serif';
     --Tomato: hsl(4, 100%, 67%);
     --Dark-Slate-Grey: hsl(234, 29%, 20%);
     --Charcoal-Grey: hsl(235, 18%, 26%);
@@ -6,15 +16,53 @@
     --White: hsl(0, 0%, 100%);
 }
 body{
+    font-family: var(--Roboto-Regular);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
     background-color: var(--Dark-Slate-Grey);
 }
+#stayUpdatedCard{
+    display: flex;
+    max-width: 20rem;
+    padding: 3rem;
+    border-radius: 2rem;
+    position: relative;
+    flex-direction: column;
+    background-color: var(--White);
+}
 
+h2{
+    
+    color: var(--Dark-Slate-Grey);
+    font-family: var(--Roboto-Bold);
+}
+#stay-updated-header{
+ 
+    font-size: 2.5rem;
+}
+#email-header{
+    font-size: 1rem;
+}
+
+#stayUpdatedCard.hidden{
+    display: none;
+}
+#thankYouCard.hidden{
+    display: none;
+}
 li{
     list-style-image: url("/assets/images/icon-list.svg");
 }
 
+.hidden{
+    display: none;
+}
 .attribution { 
     font-size: 11px; text-align: center; 
+    padding-top: 2rem;
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
