@@ -14,6 +14,7 @@
     --Charcoal-Grey: hsl(235, 18%, 26%);
     --Grey: hsl(231, 7%, 60%);
     --White: hsl(0, 0%, 100%);
+    --Hot-Pink: hsl(345, 100%, 66%);
 }
 body{
     font-family: var(--Roboto-Regular);
@@ -43,16 +44,17 @@ button{
     border-color: transparent;
     color: var(--White);
     background-color: var(--Dark-Slate-Grey);
+    outline: none; 
 }
 button:hover {
     cursor: pointer;
+    outline: none;
+    box-shadow: 0 10px 40px var(--Tomato);
+    background-image: linear-gradient(to right, var(--Hot-Pink) 10%, var(--Tomato) 60%);
 }
-
-
 .image-container{
     flex: 1;
     padding: 1.5rem 1.5rem 1.5rem 0rem;
-    
 }
 .image-container img {
     width: 100%;
@@ -66,7 +68,6 @@ button:hover {
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
- 
 }
 
 #stayUpdatedCard{
@@ -76,7 +77,6 @@ button:hover {
     width: 60rem;
     background-color: var(--White);
     border-radius: 2rem;
-  
 }
 #stay-updated-header{
     margin: 0;
@@ -109,4 +109,35 @@ li{
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+@media screen and (max-width:968px) {
+    #stayUpdatedCard{
+
+        flex-direction: column;
+        align-items: center;
+        max-width: 20.3125rem;
+        background-color: var(--White);
+        border-radius: 0rem;
+    }
+    #stay-updated-header{
+        font-size: 2.2rem;
+        padding-top: 2rem;
+    }
+    .content-container{
+        flex: 1;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .image-container {
+        padding: 0rem;
+        width: 100%;
+    }
+    .image-container img {
+        max-height: 18.75rem;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+    button{
+        margin-bottom: 2.5rem;
+    }
 }
