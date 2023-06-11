@@ -82,10 +82,6 @@ button:hover {
     margin: 0;
     font-size: 3.5rem;
 }
-#email-header{
-    font-size: 1rem;
-}
-
 #stayUpdatedCard.hidden{
     display: none;
 }
@@ -99,7 +95,36 @@ li{
     list-style-image: url("/assets/images/icon-list.svg");
     margin-bottom: 1rem;
 }
-
+#email-header{
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: flex-end;
+}
+.error-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.error{
+    color:var(--Tomato);
+    border-color: var(--Tomato);
+    background-color: hsl(21, 33%, 85%);
+}
+.error-message {
+    font-size: 0.7rem;
+    font-family: var(--Roboto-Bold);
+    display: none; 
+    color: red;
+    
+    padding-left: 14.5rem;
+}
+.email-input.error {
+    border-color: red;
+} 
+.email-input.error + .error-message {
+    display: block;
+}
 .hidden{
     display: none;
 }
@@ -127,6 +152,12 @@ li{
         flex: 1;
         padding-left: 2rem;
         padding-right: 2rem;
+    }
+    #email-header {
+        justify-content: flex-start;
+    }
+    .error-message{
+        padding-left: 5.5rem;
     }
     .image-container {
         padding: 0rem;
