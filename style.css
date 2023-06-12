@@ -69,6 +69,16 @@ button:hover {
     flex-direction: column; 
     justify-content: center; 
 }
+.thankyou-content{
+    flex: 1;
+    display: flex; 
+    flex-direction: column;
+    padding-top: 2rem;
+}
+.success-image{
+    width: 3rem;
+    height: 3rem;
+}
 
 #stayUpdatedCard{
     display: flex;
@@ -85,6 +95,21 @@ button:hover {
 #stayUpdatedCard.hidden{
     display: none;
 }
+#thankYouCard{
+    display: flex;
+    flex-direction: column;
+    max-width: 22.5rem;
+    max-height: 22.5rem;
+    padding: 3rem;
+    padding-bottom: 4rem;
+    background-color: var(--White);
+    border-radius: 2rem;
+}
+#thankyou-card-header{
+    margin: 0;
+    font-size: 2.5rem;
+}
+
 #thankYouCard.hidden{
     display: none;
 }
@@ -171,4 +196,25 @@ li{
     button{
         margin-bottom: 2.5rem;
     }
+@media screen and (max-width:425px){
+    #thankYouCard{
+        max-width: 20.3125rem;
+        min-height: calc(95vh - 1rem);
+        border-radius: 0rem;
+        padding: 1.5rem;
+    }
+    #thankyou-container{
+        margin-top: 9rem;
+    }
+
+    #dismiss-button{
+        margin-top: 20rem;
+        margin-bottom: 0rem;
+    }
+    .success-image{
+        width: 4rem;
+        height: 4rem;
+    }
+}
+
 }
