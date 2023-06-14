@@ -3,49 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="description" content="Newsletter sign-up form with success message solution by JeydenJ for frontendmentor.io"
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 </head>
 <body>
-  <form id="stayUpdatedCard" onsubmit="validateEmail(event)">
-    <div class="image-container">
-    <img src="/assets/images/illustration-sign-up-desktop.svg" 
-    alt="">
-  </div>
-  <div class="content-container">
-    <h2 id="stay-updated-header">Stay updated!</h2>
-      <p>Join 60,000+ product managers receiving monthly updates on:</p>
-      <ul>
-        <li>Product discovery and building what matters</li> 
-        <li>Measuring to ensure updates are a success</li>
-        <li>And much more!</li>
-      </ul>
-      <div class="error-header">
-        <h2 id="email-header">Email address</h2>
-        <p class="error-message" id="email-error">Valid email required</p>
+  <main>
+    <h1 class="sr-only">Newsletter sign-up form</h1>
+    <form id="stayUpdatedCard" onsubmit="validateEmail(event)">
+      <div class="image-container">
+      <img src="/assets/images/illustration-sign-up-desktop.svg" 
+      alt="Image of a tab from mac and papers showing stats">
       </div>
-        <input placeholder="email@company.com" id="userEmail"></input>
-        <button type="submit" id="subscribe-button">Subscribe to monthly newsletter</button>
-    </div>
-  </form>
-  <div id="thankYouCard" class="hidden">
-    <div id="thankyou-container">
-      <img class="success-image" src="/assets/images/icon-success.svg" alt="">
-      <div class="thankyou-content">
-      <h2 id="thankyou-card-header">Thanks for subscribing!</h2>
-        <p>A confirmation email has been sent to ash@loremcompany.com. 
-        Please open it and click the button inside to confirm your subscription
-        </p>
-      <button id="dismiss-button" onclick="dismissThankYouCard()">Dismiss message</button>
+      <div class="content-container">
+        <h2 id="stay-updated-header">Stay updated!</h2>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <li>Product discovery and building what matters</li> 
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+        <div class="error-header">
+          <h2 id="email-header">Email address</h2>
+          <p class="error-message" id="email-error">Valid email required</p>
+        </div>
+          <input placeholder="email@company.com" id="userEmail"></input>
+          <button type="submit" id="subscribe-button">Subscribe to monthly newsletter</button>
+      </div>
+    </form>
+    <div id="thankYouCard" class="hidden">
+      <div id="thankyou-container">
+        <img class="success-image" src="/assets/images/icon-success.svg" alt="a orange circle with a white tick in the middle">
+        <div class="thankyou-content">
+        <h2 id="thankyou-card-header">Thanks for subscribing!</h2>
+          <p>A confirmation email has been sent to ash@loremcompany.com. 
+          Please open it and click the button inside to confirm your subscription
+          </p>
+        <button id="dismiss-button" onclick="dismissThankYouCard()">Dismiss message</button>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="attribution">
+  </main>
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    Coded by <a href="https://github.com/JeydenJ" aria-describedby="JeydenJ's github profile">JeydenJ</a>.
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>

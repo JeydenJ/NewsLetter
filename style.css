@@ -2,10 +2,12 @@
     font-family: 'Roboto-Regular';
     src: url('./assets/fonts/Roboto-Regular.ttf') format('truetype');
 }
+
 @font-face{ 
     font-family: 'Roboto-Bold';
     src: url('./assets/fonts/Roboto-Bold.ttf') format('truetype');
 }
+
 :root{
     --Roboto-Regular: 'Roboto-Regular', 'sans serif';
     --Roboto-Bold: 'Roboto-Bold', 'sans serif';
@@ -16,14 +18,14 @@
     --White: hsl(0, 0%, 100%);
     --Hot-Pink: hsl(345, 100%, 66%);
 }
+
 body{
-    font-family: var(--Roboto-Regular);
-    font-size: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     flex-direction: column;
+    font-family: var(--Roboto-Regular);
     background-color: var(--Dark-Slate-Grey);
 }
 h2{
@@ -44,7 +46,6 @@ button{
     border-color: transparent;
     color: var(--White);
     background-color: var(--Dark-Slate-Grey);
-    outline: none; 
 }
 button:hover {
     cursor: pointer;
@@ -52,25 +53,23 @@ button:hover {
     box-shadow: 0 10px 40px var(--Tomato);
     background-image: linear-gradient(to right, var(--Hot-Pink) 10%, var(--Tomato) 60%);
 }
+
 .image-container{
-    flex: 1;
     padding: 1.5rem 1.5rem 1.5rem 0rem;
 }
 .image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+}
 .content-container{
-    flex: 1;
-    padding-left: 4rem;
-    padding-right: 4rem;
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
+    padding-left: 4rem;
+    padding-right: 4rem;
 }
 .thankyou-content{
-    flex: 1;
     display: flex; 
     flex-direction: column;
     padding-top: 2rem;
@@ -85,16 +84,20 @@ button:hover {
     flex-direction: row-reverse;
     align-items: center;
     width: 60rem;
-    background-color: var(--White);
     border-radius: 2rem;
+    background-color: var(--White);
+}
+#stayUpdatedCard.hidden{
+    display: none;
 }
 #stay-updated-header{
     margin: 0;
     font-size: 3.5rem;
 }
-#stayUpdatedCard.hidden{
-    display: none;
+#email-header{
+    font-size: 0.7rem;
 }
+
 #thankYouCard{
     display: flex;
     flex-direction: column;
@@ -105,14 +108,14 @@ button:hover {
     background-color: var(--White);
     border-radius: 2rem;
 }
+#thankYouCard.hidden{
+    display: none;
+}
 #thankyou-card-header{
     margin: 0;
     font-size: 2.5rem;
 }
 
-#thankYouCard.hidden{
-    display: none;
-}
 ul{
     padding-left: 2rem;
 }
@@ -120,29 +123,23 @@ li{
     list-style-image: url("/assets/images/icon-list.svg");
     margin-bottom: 1rem;
 }
-#email-header{
-    font-size: 0.7rem;
-    display: flex;
-    justify-content: flex-end;
-}
+
 .error-header{
     display: flex;
     flex-direction: row;
     align-items: center;
-    
 }
 .error{
     color:var(--Tomato);
     border-color: var(--Tomato);
-    background-color: hsl(21, 33%, 85%);
+    background-color: hsl(0, 100%, 90%);
 }
 .error-message {
     font-size: 0.7rem;
     font-family: var(--Roboto-Bold);
     display: none; 
     color: red;
-    
-    padding-left: 14.5rem;
+    padding-left: 15.5rem;
 }
 .email-input.error {
     border-color: red;
@@ -150,9 +147,17 @@ li{
 .email-input.error + .error-message {
     display: block;
 }
+
 .hidden{
     display: none;
 }
+
+.sr-only{
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+}
+
 .attribution { 
     font-size: 11px; text-align: center; 
     padding-top: 2rem;
@@ -160,11 +165,10 @@ li{
 .attribution a { 
     color: hsl(228, 45%, 44%); 
 }
+
 @media screen and (max-width:968px) {
     #stayUpdatedCard{
-
         flex-direction: column;
-        align-items: center;
         max-width: 20.3125rem;
         background-color: var(--White);
         border-radius: 0rem;
@@ -175,14 +179,11 @@ li{
     }
     .content-container{
         flex: 1;
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-    #email-header {
-        justify-content: flex-start;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
     .error-message{
-        padding-left: 5.5rem;
+        padding-left: 6.5rem;
     }
     .image-container {
         padding: 0rem;
@@ -193,23 +194,25 @@ li{
         border-bottom-left-radius: 1rem;
         border-bottom-right-radius: 1rem;
     }
-    button{
+    #subscribe-button{
         margin-bottom: 2.5rem;
     }
+
 @media screen and (max-width:425px){
     #thankYouCard{
-        max-width: 20.3125rem;
-        min-height: calc(95vh - 1rem);
+        max-width: 21rem;
+        min-height: 52rem;
+
         border-radius: 0rem;
         padding: 1.5rem;
     }
     #thankyou-container{
         margin-top: 9rem;
     }
-
+    
     #dismiss-button{
-        margin-top: 20rem;
-        margin-bottom: 0rem;
+        margin-top: 19.5rem;
+        
     }
     .success-image{
         width: 4rem;
